@@ -1,0 +1,81 @@
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<div class="text-center border border-light p-5">
+   <%= form_with(model: dato, local: true) do |form| %>
+   <% if dato.errors.any? %>
+     <div id="error_explanation">
+       <h2><%= pluralize(dato.errors.count, "error") %> prohibited this dato from being saved:</h2>
+
+       <ul>
+       <% dato.errors.full_messages.each do |message| %>
+         <li><%= message %></li>
+       <% end %>
+       </ul>
+     </div>
+    <% end %>
+
+<div class="container">
+
+   <div class="row">
+     <div class="col-md-3 mb-3">
+         <%= label_tag 'name', 'Name', for: "name" %>
+         <%= form.text_field :name, id: :name, :class => 'form-control', :required => true %>
+     </div>
+     <div class="col-md-3 mb-3">
+         <%= label_tag 'email', 'Email', for: "email" %>
+         <%= form.text_field :email, id: :email, :class => 'form-control', :required => true %>
+     </div>
+     <div class="col-md-3 mb-3">
+       <%= form.label :totalIngress %>
+       <%= form.text_field :totalIngress, id: :totalIngress, :class => 'form-control', :required => true %>
+     </div>
+   </div>
+
+   <div class="row">
+     <div class="col-md-3 mb-3 mt-2">
+       <%= label_tag 'sector', 'Sector', for: "sector" %>
+       <br>
+       <%= form.select :sector, ['Público', 'Privado'], id: :sector, :class => 'form-control', :required => true%>
+     </div>
+     <div class="col-md-3 mb-3 mt-2">
+       <%= label_tag 'workYears', 'WorkYears', for: "workYears" %>
+       <%= form.number_field :workYears, id: :workYears, :class => 'form-control', :required => true %>
+       </div>
+       <div class="col-md-3 mb-3 mt-2">
+         <%= label_tag 'amount', 'Amount ($100 - $2000)', for: "amount" %>
+         <%= form.number_field :amount, id: :amount, :class => 'form-control', :required => true %>
+       </div>
+     </div>
+
+     <div class="row">
+       <div class="col-md-3 mb-3 mt-2">
+         <%= label_tag 'frecuency', 'Frecuency', for: "frecuency" %>
+         <br>
+         <%= form.select :frecuency, ['Mensual', 'quincenal'], id: :frecuency, :class=>"form-control", :required => false%>
+       </div>
+       <div class="col-md-3 mb-3 mt-2">
+         <%= label_tag 'payTime', 'PayTime', for: "payTime" %>
+         <br>
+         <%= form.select :payTime, [3, 6, 12, 18, 24, 36], id: :payTime, :class => 'form-control', :required => false%>
+       </div>
+     </div>
+   </div>
+<br><br>
+<div class="container">
+ <div class="row">
+   <div class="col-md-3 mt-12">
+     <div class="actions">
+       <%= form.submit %>
+     </div>
+   </div>
+ </div>
+</div>
+<% end %>
+</div>

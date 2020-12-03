@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  totalIngress: 9.99
+  sector: MyString
+  workYears: 1
+  amount: 1
+  frecuency: MyString
+  payTime: 1
+
+two:
+  name: MyString
+  email: MyString
+  totalIngress: 9.99
+  sector: MyString
+  workYears: 1
+  amount: 1
+  frecuency: MyString
+  payTime: 1

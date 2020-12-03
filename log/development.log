@@ -1,0 +1,1026 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateDatos (20201203064834)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "datos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "totalIngress" decimal DEFAULT 0.0 NOT NULL, "sector" varchar NOT NULL, "workYears" integer NOT NULL, "amount" integer NOT NULL, "frecuency" varchar DEFAULT 'Mensual' NOT NULL, "payTime" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201203064834_create_datos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201203064834"]]
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-03 06:49:20.306357"], ["updated_at", "2020-12-03 06:49:20.306357"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2020-12-02 22:52:05 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/johanhg11/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/johanhg11/.rvm/gems/ruby-2.6.5/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/johanhg11/.rvm/gems/ruby-2.6.5/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2020-12-02 22:52:10 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 22:52:16 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.2ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 887ms (Views: 878.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/datos/new" for 127.0.0.1 at 2020-12-02 22:52:21 -0800
+Processing by DatosController#new as HTML
+  Rendering datos/new.html.erb within layouts/application
+  Rendered datos/_form.html.erb (18.1ms)
+  Rendered datos/new.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 40ms (Views: 31.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 22:52:43 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 22:53:13 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:21
+  Rendered datos/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos/new" for 127.0.0.1 at 2020-12-02 22:53:14 -0800
+Processing by DatosController#new as HTML
+  Rendering datos/new.html.erb within layouts/application
+  Rendered datos/_form.html.erb (2.8ms)
+  Rendered datos/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/datos" for 127.0.0.1 at 2020-12-02 22:53:32 -0800
+Processing by DatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"voXhVMyP1bOXELXrD37EVYCYeUQe/hKFe9kh5evnBjvllrfybg2BNU7l9xUfWF119K8chfcthXHDDYi0k5Tnzg==", "dato"=>{"name"=>"Johan", "email"=>"johan@gmail.com", "totalIngress"=>"110.0", "sector"=>"asdasd", "workYears"=>"1", "amount"=>"2321", "frecuency"=>"Mensual", "payTime"=>"12"}, "commit"=>"Create Dato"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:30
+  [1m[36mDato Create (0.4ms)[0m  [1m[32mINSERT INTO "datos" ("name", "email", "totalIngress", "sector", "workYears", "amount", "payTime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Johan"], ["email", "johan@gmail.com"], ["totalIngress", 110.0], ["sector", "asdasd"], ["workYears", 1], ["amount", 2321], ["payTime", 12], ["created_at", "2020-12-03 06:53:32.518658"], ["updated_at", "2020-12-03 06:53:32.518658"]]
+  ↳ app/controllers/datos_controller.rb:30
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:30
+Redirected to http://localhost:3000/datos/1
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/datos/1" for 127.0.0.1 at 2020-12-02 22:53:32 -0800
+Processing by DatosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDato Load (0.2ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:67
+  Rendering datos/show.html.erb within layouts/application
+  Rendered datos/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 22:53:45 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:21
+  Rendered datos/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 22:54:04 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos/1/edit" for 127.0.0.1 at 2020-12-02 22:54:06 -0800
+Processing by DatosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDato Load (0.2ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:67
+  Rendering datos/edit.html.erb within layouts/application
+  Rendered datos/_form.html.erb (16.8ms)
+  Rendered datos/edit.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/datos/1" for 127.0.0.1 at 2020-12-02 22:54:12 -0800
+Processing by DatosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yg8tUGb7Bj8aFIWBYH9YpUEOPXLtuiOqLIbHPbpoPc0QioSFMMp6Jyp0Fyo0h74sECK9BTe0oWOxyzj4rG0hlw==", "dato"=>{"name"=>"Johan", "email"=>"johan@gmail.com", "totalIngress"=>"110.0", "sector"=>"asdasd", "workYears"=>"12", "amount"=>"2321", "frecuency"=>"Mensual", "payTime"=>"12"}, "commit"=>"Update Dato", "id"=>"1"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:44
+  [1m[36mDato Update (0.3ms)[0m  [1m[33mUPDATE "datos" SET "workYears" = ?, "updated_at" = ? WHERE "datos"."id" = ?[0m  [["workYears", 12], ["updated_at", "2020-12-03 06:54:12.099365"], ["id", 1]]
+  ↳ app/controllers/datos_controller.rb:44
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:44
+Redirected to http://localhost:3000/datos/1
+Completed 302 Found in 9ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/datos/1" for 127.0.0.1 at 2020-12-02 22:54:12 -0800
+Processing by DatosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:67
+  Rendering datos/show.html.erb within layouts/application
+  Rendered datos/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 22:54:13 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 22:54:35 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos/1/edit" for 127.0.0.1 at 2020-12-02 22:54:36 -0800
+Processing by DatosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:67
+  Rendering datos/edit.html.erb within layouts/application
+  Rendered datos/_form.html.erb (2.9ms)
+  Rendered datos/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos/1/edit" for 127.0.0.1 at 2020-12-02 22:55:47 -0800
+Processing by DatosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:67
+  Rendering datos/edit.html.erb within layouts/application
+  Rendered datos/_form.html.erb (1.9ms)
+  Rendered datos/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/datos/1" for 127.0.0.1 at 2020-12-02 22:55:51 -0800
+Processing by DatosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vKGyBIrQWVti5e622cKRhlmF+H2rM4I5kUIljXrtW6zFt1LaUcYPC7fTtPFPXjlTQ/cgYFv/Q1oEhAds4b3tCA==", "dato"=>{"name"=>"Johan", "email"=>"johan@gmail.com", "totalIngress"=>"110.0", "sector"=>"Público", "workYears"=>"12", "amount"=>"232134", "frecuency"=>"Mensual", "payTime"=>"12"}, "commit"=>"Update Dato", "id"=>"1"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:44
+  [1m[36mDato Update (0.7ms)[0m  [1m[33mUPDATE "datos" SET "sector" = ?, "amount" = ?, "updated_at" = ? WHERE "datos"."id" = ?[0m  [["sector", "Público"], ["amount", 232134], ["updated_at", "2020-12-03 06:55:51.221536"], ["id", 1]]
+  ↳ app/controllers/datos_controller.rb:44
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:44
+Redirected to http://localhost:3000/datos/1
+Completed 302 Found in 10ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/datos/1" for 127.0.0.1 at 2020-12-02 22:55:51 -0800
+Processing by DatosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:67
+  Rendering datos/show.html.erb within layouts/application
+  Rendered datos/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 22:55:55 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos/new" for 127.0.0.1 at 2020-12-02 22:56:01 -0800
+Processing by DatosController#new as HTML
+  Rendering datos/new.html.erb within layouts/application
+  Rendered datos/_form.html.erb (1.7ms)
+  Rendered datos/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/datos/new" for 127.0.0.1 at 2020-12-02 22:56:44 -0800
+Processing by DatosController#new as HTML
+  Rendering datos/new.html.erb within layouts/application
+  Rendered datos/_form.html.erb (2.5ms)
+  Rendered datos/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/datos" for 127.0.0.1 at 2020-12-02 22:57:05 -0800
+Processing by DatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CE2ENPv+Ywf1NJjCVBDNLraTi1gpU/Ilv6PbnoFN3zxxW2TqIOg1VyACwoXCjGX7rOFTRdmfM0YqZfl/Gh1pmA==", "dato"=>{"name"=>"Johan", "email"=>"johan@gmail.com", "totalIngress"=>"110.0", "sector"=>"rtrt", "workYears"=>"6", "amount"=>"6", "frecuency"=>"Mensual", "payTime"=>"4"}, "commit"=>"Create Dato"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:30
+  [1m[36mDato Create (0.3ms)[0m  [1m[32mINSERT INTO "datos" ("name", "email", "totalIngress", "sector", "workYears", "amount", "payTime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Johan"], ["email", "johan@gmail.com"], ["totalIngress", 110.0], ["sector", "rtrt"], ["workYears", 6], ["amount", 6], ["payTime", 4], ["created_at", "2020-12-03 06:57:05.633880"], ["updated_at", "2020-12-03 06:57:05.633880"]]
+  ↳ app/controllers/datos_controller.rb:30
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:30
+Redirected to http://localhost:3000/datos/2
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/datos/2" for 127.0.0.1 at 2020-12-02 22:57:05 -0800
+Processing by DatosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:67
+  Rendering datos/show.html.erb within layouts/application
+  Rendered datos/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 22:57:09 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 22:57:58 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos/new" for 127.0.0.1 at 2020-12-02 22:57:59 -0800
+Processing by DatosController#new as HTML
+  Rendering datos/new.html.erb within layouts/application
+  Rendered datos/_form.html.erb (2.0ms)
+  Rendered datos/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/datos" for 127.0.0.1 at 2020-12-02 22:58:09 -0800
+Processing by DatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C6qPXupY4OgYWnh4het6OGgcytdGD6bwH3X0LOH+kUdQudn4SNq0bsGvOoaVzeMYHCuvFq/cMQSnoV19mY1wsg==", "dato"=>{"name"=>"Johan", "email"=>"johan@gmail.com", "totalIngress"=>"110.0", "sector"=>"Público", "workYears"=>"56", "amount"=>"455", "frecuency"=>"Mensual", "payTime"=>"36"}, "commit"=>"Create Dato"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:30
+  [1m[36mDato Create (1.1ms)[0m  [1m[32mINSERT INTO "datos" ("name", "email", "totalIngress", "sector", "workYears", "amount", "payTime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Johan"], ["email", "johan@gmail.com"], ["totalIngress", 110.0], ["sector", "Público"], ["workYears", 56], ["amount", 455], ["payTime", 36], ["created_at", "2020-12-03 06:58:09.255740"], ["updated_at", "2020-12-03 06:58:09.255740"]]
+  ↳ app/controllers/datos_controller.rb:30
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:30
+Redirected to http://localhost:3000/datos/3
+Completed 302 Found in 10ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/datos/3" for 127.0.0.1 at 2020-12-02 22:58:09 -0800
+Processing by DatosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:67
+  Rendering datos/show.html.erb within layouts/application
+  Rendered datos/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 22:58:16 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/datos/3" for 127.0.0.1 at 2020-12-02 22:58:21 -0800
+Processing by DatosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YPTaosrYBa1MAZP2OJ0v3m0q5DrKy4i5+UDphgXn2NIZ4jp8Ec5T/Zk3ybGuAYcLd1g8JzoHSdpshstnnrdudg==", "id"=>"3"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:57
+  [1m[36mDato Destroy (0.6ms)[0m  [1m[31mDELETE FROM "datos" WHERE "datos"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/datos_controller.rb:57
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:57
+Redirected to http://localhost:3000/datos
+Completed 302 Found in 7ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 22:58:21 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.2ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/datos/2" for 127.0.0.1 at 2020-12-02 22:58:23 -0800
+Processing by DatosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4x6Em/f0gWVIKzH6mwixeuxmuH4WhFO2AryeMmUkinSaCGRFLOLXNZ0da70NlBmv9hRgY+ZIktWXerzT/nQ80A==", "id"=>"2"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:57
+  [1m[36mDato Destroy (0.5ms)[0m  [1m[31mDELETE FROM "datos" WHERE "datos"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/datos_controller.rb:57
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:57
+Redirected to http://localhost:3000/datos
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 22:58:23 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/datos/1" for 127.0.0.1 at 2020-12-02 22:58:24 -0800
+Processing by DatosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7cVt7O9hx8iSuGBV3B/D1aOLQIGSHOZnld00DZZYSryU040yNHeRmEeOOhJKg2sAufmYnGLQJwQAGxbsDQj8GA==", "id"=>"1"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:57
+  [1m[36mDato Destroy (0.6ms)[0m  [1m[31mDELETE FROM "datos" WHERE "datos"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/datos_controller.rb:57
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:57
+Redirected to http://localhost:3000/datos
+Completed 302 Found in 7ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 22:58:24 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dato" for 127.0.0.1 at 2020-12-02 23:03:12 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/johanhg11/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/dato"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:03:16 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (1.4ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 149ms (Views: 144.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/datos/new" for 127.0.0.1 at 2020-12-02 23:03:19 -0800
+Processing by DatosController#new as HTML
+  Rendering datos/new.html.erb within layouts/application
+  Rendered datos/_form.html.erb (5.8ms)
+  Rendered datos/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 28ms (Views: 16.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/datos" for 127.0.0.1 at 2020-12-02 23:03:36 -0800
+Processing by DatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i97/VxFjtodpjwCrjRkeEdk6okyiioMLmNhe2zcGTivs3vLOhl6kO5zqlHnZr1//gfXVMo4Jbs7xzmb42C6XkQ==", "dato"=>{"name"=>"Johan", "email"=>"johan@gmail.com", "totalIngress"=>"110.0", "sector"=>"Público", "workYears"=>"7", "amount"=>"123", "frecuency"=>"Mensual", "payTime"=>"36"}, "commit"=>"Create Dato"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:30
+  [1m[36mDato Create (0.3ms)[0m  [1m[32mINSERT INTO "datos" ("name", "email", "totalIngress", "sector", "workYears", "amount", "payTime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Johan"], ["email", "johan@gmail.com"], ["totalIngress", 110.0], ["sector", "Público"], ["workYears", 7], ["amount", 123], ["payTime", 36], ["created_at", "2020-12-03 07:03:36.322648"], ["updated_at", "2020-12-03 07:03:36.322648"]]
+  ↳ app/controllers/datos_controller.rb:30
+  [1m[35m (26.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:30
+Redirected to http://localhost:3000/datos/4
+Completed 302 Found in 30ms (ActiveRecord: 26.5ms)
+
+
+Started GET "/datos/4" for 127.0.0.1 at 2020-12-02 23:03:36 -0800
+Processing by DatosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDato Load (0.2ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  Rendering datos/show.html.erb within layouts/application
+  Rendered datos/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:03:39 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.2ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/datos/new" for 127.0.0.1 at 2020-12-02 23:03:42 -0800
+Processing by DatosController#new as HTML
+  Rendering datos/new.html.erb within layouts/application
+  Rendered datos/_form.html.erb (2.5ms)
+  Rendered datos/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/datos" for 127.0.0.1 at 2020-12-02 23:04:11 -0800
+Processing by DatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+c95fKsQBSNiUz2d5grwtwoAwDCU1Dgi78ITxs8g2qOez3TlPC0Xn5c2qU+yvLFZUs+3TrhX1eeG1CvlIAgDGQ==", "dato"=>{"name"=>"Otro", "email"=>"otro@gmail.com", "totalIngress"=>"123.4", "sector"=>"Privado", "workYears"=>"21", "amount"=>"12", "frecuency"=>"quincenal", "payTime"=>"24"}, "commit"=>"Create Dato"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant DatosController::Datum):
+  
+app/controllers/datos_controller.rb:38:in `block in create'
+app/controllers/datos_controller.rb:28:in `create'
+Started POST "/datos" for 127.0.0.1 at 2020-12-02 23:04:33 -0800
+Processing by DatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+c95fKsQBSNiUz2d5grwtwoAwDCU1Dgi78ITxs8g2qOez3TlPC0Xn5c2qU+yvLFZUs+3TrhX1eeG1CvlIAgDGQ==", "dato"=>{"name"=>"Otro", "email"=>"otro@gmail.com", "totalIngress"=>"123.4", "sector"=>"Privado", "workYears"=>"21", "amount"=>"12", "frecuency"=>"quincenal", "payTime"=>"24"}, "commit"=>"Create Dato"}
+  Rendering datos/new.html.erb within layouts/application
+  Rendered datos/_form.html.erb (1.9ms)
+  Rendered datos/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 28ms (Views: 12.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/datos" for 127.0.0.1 at 2020-12-02 23:04:41 -0800
+Processing by DatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+c95fKsQBSNiUz2d5grwtwoAwDCU1Dgi78ITxs8g2qOez3TlPC0Xn5c2qU+yvLFZUs+3TrhX1eeG1CvlIAgDGQ==", "dato"=>{"name"=>"Otro", "email"=>"otro@gmail.com", "totalIngress"=>"123.4", "sector"=>"Privado", "workYears"=>"21", "amount"=>"125", "frecuency"=>"quincenal", "payTime"=>"24"}, "commit"=>"Create Dato"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:30
+  [1m[36mDato Create (0.2ms)[0m  [1m[32mINSERT INTO "datos" ("name", "email", "totalIngress", "sector", "workYears", "amount", "frecuency", "payTime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Otro"], ["email", "otro@gmail.com"], ["totalIngress", 123.4], ["sector", "Privado"], ["workYears", 21], ["amount", 125], ["frecuency", "quincenal"], ["payTime", 24], ["created_at", "2020-12-03 07:04:41.523202"], ["updated_at", "2020-12-03 07:04:41.523202"]]
+  ↳ app/controllers/datos_controller.rb:30
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:30
+Redirected to http://localhost:3000/datos/5
+Completed 302 Found in 5ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/datos/5" for 127.0.0.1 at 2020-12-02 23:04:41 -0800
+Processing by DatosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDato Load (0.2ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  Rendering datos/show.html.erb within layouts/application
+  Rendered datos/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:04:47 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.2ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/datos/5/edit" for 127.0.0.1 at 2020-12-02 23:06:16 -0800
+Processing by DatosController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  Rendering datos/edit.html.erb within layouts/application
+  Rendered datos/_form.html.erb (2.6ms)
+  Rendered datos/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/datos/5" for 127.0.0.1 at 2020-12-02 23:06:21 -0800
+Processing by DatosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bNV4jKhVItQwI63mpcSFCWotkrn4tnDM2KTnYqIUFgIsb5iriJLqElsKLK/Ad9ZbSnhuLQ0ZIiMqpEK5Zpop6w==", "dato"=>{"name"=>"Otro", "email"=>"otro@gmail.com", "totalIngress"=>"123.4", "sector"=>"Privado", "workYears"=>"19", "amount"=>"125", "frecuency"=>"quincenal", "payTime"=>"24"}, "commit"=>"Update Dato", "id"=>"5"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:49
+  [1m[36mDato Update (0.3ms)[0m  [1m[33mUPDATE "datos" SET "workYears" = ?, "updated_at" = ? WHERE "datos"."id" = ?[0m  [["workYears", 19], ["updated_at", "2020-12-03 07:06:21.592653"], ["id", 5]]
+  ↳ app/controllers/datos_controller.rb:49
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:49
+Redirected to http://localhost:3000/datos/5
+Completed 302 Found in 7ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/datos/5" for 127.0.0.1 at 2020-12-02 23:06:21 -0800
+Processing by DatosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  Rendering datos/show.html.erb within layouts/application
+  Rendered datos/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:06:33 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:06:57 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos/5/edit" for 127.0.0.1 at 2020-12-02 23:06:59 -0800
+Processing by DatosController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  Rendering datos/edit.html.erb within layouts/application
+  Rendered datos/_form.html.erb (2.7ms)
+  Rendered datos/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/datos/5" for 127.0.0.1 at 2020-12-02 23:07:03 -0800
+Processing by DatosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fJfY/PPgkbpVN9To51OhWFgOOQZYCLXqMbNIpHlcbjM8LTjb0ydZfD4eVaGC4PIKeFvFkq2n5wXDs+1/vdJR2g==", "dato"=>{"name"=>"Otro", "email"=>"otro@gmail.com", "totalIngress"=>"123.4", "sector"=>"Público", "workYears"=>"19", "amount"=>"125", "frecuency"=>"quincenal", "payTime"=>"24"}, "commit"=>"Update Dato", "id"=>"5"}
+  [1m[36mDato Load (0.2ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:49
+  [1m[36mDato Update (1.1ms)[0m  [1m[33mUPDATE "datos" SET "sector" = ?, "updated_at" = ? WHERE "datos"."id" = ?[0m  [["sector", "Público"], ["updated_at", "2020-12-03 07:07:03.435654"], ["id", 5]]
+  ↳ app/controllers/datos_controller.rb:49
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:49
+Redirected to http://localhost:3000/datos/5
+Completed 302 Found in 11ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/datos/5" for 127.0.0.1 at 2020-12-02 23:07:03 -0800
+Processing by DatosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  Rendering datos/show.html.erb within layouts/application
+  Rendered datos/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:07:14 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos/4/edit" for 127.0.0.1 at 2020-12-02 23:08:24 -0800
+Processing by DatosController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDato Load (0.2ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  Rendering datos/edit.html.erb within layouts/application
+  Rendered datos/_form.html.erb (4.1ms)
+  Rendered datos/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/datos/4" for 127.0.0.1 at 2020-12-02 23:08:27 -0800
+Processing by DatosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ra83IxM5WjTDpuEcU9ZQVMdWgsSR9Zp9hZPp7vmeJ44qkTbbZJbnTFex0KM30AVakCJOsCE5wyB5gKCi3aRr1w==", "dato"=>{"name"=>"Johan", "email"=>"johan@gmail.com", "totalIngress"=>"110.0", "sector"=>"Público", "workYears"=>"7", "amount"=>"123", "frecuency"=>"Mensual", "payTime"=>"18"}, "commit"=>"Update Dato", "id"=>"4"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:49
+  [1m[36mDato Update (0.3ms)[0m  [1m[33mUPDATE "datos" SET "payTime" = ?, "updated_at" = ? WHERE "datos"."id" = ?[0m  [["payTime", 18], ["updated_at", "2020-12-03 07:08:27.641536"], ["id", 4]]
+  ↳ app/controllers/datos_controller.rb:49
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:49
+Redirected to http://localhost:3000/datos/4
+Completed 302 Found in 7ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/datos/4" for 127.0.0.1 at 2020-12-02 23:08:27 -0800
+Processing by DatosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  Rendering datos/show.html.erb within layouts/application
+  Rendered datos/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:08:29 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:09:17 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:45
+  Rendered datos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:10:20 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos/new" for 127.0.0.1 at 2020-12-02 23:10:45 -0800
+Processing by DatosController#new as HTML
+  Rendering datos/new.html.erb within layouts/application
+  Rendered datos/_form.html.erb (2.7ms)
+  Rendered datos/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:10:53 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:14:58 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos/4/edit" for 127.0.0.1 at 2020-12-02 23:15:01 -0800
+Processing by DatosController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  Rendering datos/edit.html.erb within layouts/application
+  Rendered datos/_form.html.erb (2.7ms)
+  Rendered datos/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/datos/4" for 127.0.0.1 at 2020-12-02 23:15:04 -0800
+Processing by DatosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bMVpFTXEiY923Tn5/3Pjlw4K0ARfVpcRPAJIqjMTBsfr+2jtQms09+LKCEabdbaZWX4ccO+azkzAEQHmFylKng==", "dato"=>{"name"=>"Johan", "email"=>"johan@gmail.com", "totalIngress"=>"110.0", "sector"=>"Público", "workYears"=>"8", "amount"=>"123", "frecuency"=>"Mensual", "payTime"=>"18"}, "commit"=>"Update Dato", "id"=>"4"}
+  [1m[36mDato Load (0.2ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:49
+  [1m[36mDato Update (1.4ms)[0m  [1m[33mUPDATE "datos" SET "workYears" = ?, "updated_at" = ? WHERE "datos"."id" = ?[0m  [["workYears", 8], ["updated_at", "2020-12-03 07:15:04.922713"], ["id", 4]]
+  ↳ app/controllers/datos_controller.rb:49
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:49
+Redirected to http://localhost:3000/datos/4
+Completed 302 Found in 11ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/datos/4" for 127.0.0.1 at 2020-12-02 23:15:04 -0800
+Processing by DatosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  Rendering datos/show.html.erb within layouts/application
+  Rendered datos/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:15:06 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.2ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/datos/4/edit" for 127.0.0.1 at 2020-12-02 23:15:18 -0800
+Processing by DatosController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  Rendering datos/edit.html.erb within layouts/application
+  Rendered datos/_form.html.erb (4.4ms)
+  Rendered datos/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/datos/4" for 127.0.0.1 at 2020-12-02 23:15:23 -0800
+Processing by DatosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WHcpw5Cu7BDJJtKcYyYq+CeWWp/EhL0m2zvBBGQbIsDfSSg75wFRaF0x4yMHIH/2cOKW63RI5HsnKIhIQCFumQ==", "dato"=>{"name"=>"Johan", "email"=>"johan@gmail.com", "totalIngress"=>"110.0", "sector"=>"Público", "workYears"=>"8", "amount"=>"11", "frecuency"=>"Mensual", "payTime"=>"18"}, "commit"=>"Update Dato", "id"=>"4"}
+  [1m[36mDato Load (0.2ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:49
+  [1m[36mDato Update (0.8ms)[0m  [1m[33mUPDATE "datos" SET "amount" = ?, "updated_at" = ? WHERE "datos"."id" = ?[0m  [["amount", 11], ["updated_at", "2020-12-03 07:15:23.358881"], ["id", 4]]
+  ↳ app/controllers/datos_controller.rb:49
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:49
+Redirected to http://localhost:3000/datos/4
+Completed 302 Found in 12ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/datos/4" for 127.0.0.1 at 2020-12-02 23:15:23 -0800
+Processing by DatosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  Rendering datos/show.html.erb within layouts/application
+  Rendered datos/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:15:25 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos/4/edit" for 127.0.0.1 at 2020-12-02 23:15:27 -0800
+Processing by DatosController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  Rendering datos/edit.html.erb within layouts/application
+  Rendered datos/_form.html.erb (2.8ms)
+  Rendered datos/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/datos/4" for 127.0.0.1 at 2020-12-02 23:15:30 -0800
+Processing by DatosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zekyruFbsNdRzrIMfjuNkGWNBlYpB/ITDB+iUDcZX9BK1zNWlvQNr8XZg7MaPdieMvnKIpnLq07wDOscEyMTiQ==", "dato"=>{"name"=>"Johan", "email"=>"johan@gmail.com", "totalIngress"=>"110.0", "sector"=>"Público", "workYears"=>"8", "amount"=>"1145", "frecuency"=>"Mensual", "payTime"=>"18"}, "commit"=>"Update Dato", "id"=>"4"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:49
+  [1m[36mDato Update (0.7ms)[0m  [1m[33mUPDATE "datos" SET "amount" = ?, "updated_at" = ? WHERE "datos"."id" = ?[0m  [["amount", 1145], ["updated_at", "2020-12-03 07:15:30.767982"], ["id", 4]]
+  ↳ app/controllers/datos_controller.rb:49
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:49
+Redirected to http://localhost:3000/datos/4
+Completed 302 Found in 8ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/datos/4" for 127.0.0.1 at 2020-12-02 23:15:30 -0800
+Processing by DatosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  Rendering datos/show.html.erb within layouts/application
+  Rendered datos/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:15:32 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:17:55 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:18:35 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.2ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 35ms (Views: 34.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:18:53 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:19:27 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:20:02 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:22:53 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:23:58 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 38ms (Views: 37.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos/new" for 127.0.0.1 at 2020-12-02 23:24:41 -0800
+Processing by DatosController#new as HTML
+  Rendering datos/new.html.erb within layouts/application
+  Rendered datos/_form.html.erb (2.2ms)
+  Rendered datos/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/datos" for 127.0.0.1 at 2020-12-02 23:25:13 -0800
+Processing by DatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fO2tJgmid7NK4WBtKxG+anvq9qo/K53AJQdemJ8Kb80b7aC/np9lD7+E9L9/p/+EIyWB1BOocAVMEWa7cCK2dw==", "dato"=>{"name"=>"Prueba", "email"=>"prueba@gmail.com", "totalIngress"=>"123.4", "sector"=>"Privado", "workYears"=>"6", "amount"=>"1234", "frecuency"=>"quincenal", "payTime"=>"18"}, "commit"=>"Create Dato"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/datos_controller.rb:30
+  [1m[36mDato Create (0.6ms)[0m  [1m[32mINSERT INTO "datos" ("name", "email", "totalIngress", "sector", "workYears", "amount", "frecuency", "payTime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Prueba"], ["email", "prueba@gmail.com"], ["totalIngress", 123.4], ["sector", "Privado"], ["workYears", 6], ["amount", 1234], ["frecuency", "quincenal"], ["payTime", 18], ["created_at", "2020-12-03 07:25:13.520124"], ["updated_at", "2020-12-03 07:25:13.520124"]]
+  ↳ app/controllers/datos_controller.rb:30
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/datos_controller.rb:30
+Redirected to http://localhost:3000/datos/6
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/datos/6" for 127.0.0.1 at 2020-12-02 23:25:13 -0800
+Processing by DatosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDato Load (0.2ms)[0m  [1m[34mSELECT  "datos".* FROM "datos" WHERE "datos"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/datos_controller.rb:72
+  Rendering datos/show.html.erb within layouts/application
+  Rendered datos/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:25:14 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:26:01 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.7ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/datos/new" for 127.0.0.1 at 2020-12-02 23:26:03 -0800
+Processing by DatosController#new as HTML
+  Rendering datos/new.html.erb within layouts/application
+  Rendered datos/_form.html.erb (3.8ms)
+  Rendered datos/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/datos" for 127.0.0.1 at 2020-12-02 23:26:16 -0800
+Processing by DatosController#index as HTML
+  Rendering datos/index.html.erb within layouts/application
+  [1m[36mDato Load (0.1ms)[0m  [1m[34mSELECT "datos".* FROM "datos"[0m
+  ↳ app/views/datos/index.html.erb:46
+  Rendered datos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.1ms)
+
+
